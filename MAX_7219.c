@@ -83,12 +83,13 @@ valor[1].signo[5]=0b00001100;
 valor[1].signo[6]=0b00001100;
 valor[1].signo[7]=0b00001100;
 //
+
   const char tab[8]={0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08};
   for (j=0;j<8;j++){
     output_low(PIN_A5);
     spi_write(tab[j]);
     for (i=n;i==0;i--){
-      spi_write(valor[val].signo[j]);
+      spi_write(valor[arr[val]].signo[j]);
     }
     output_high(PIN_A5);
   }
