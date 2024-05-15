@@ -56,12 +56,18 @@ Max_init(int value){
 void Max_print(long val){
   int n,i,j;
   long k= val;
-  ar[5];
+  int ar[20]; //reservo memoria para 20 numeros maximo.
   //detectar cuantos numeros hay que pasar 
   while(k!=0){
     k=k/10;
   n++;
   }
+  // lectura y posicionamientod de los valores 
+  k=val;
+  for (i=0;i<n;i++){
+     ar[n-1-i]=k % 10;
+     k=k/10;
+     }
   struct signos valor[8];
 //se cargas en ram los valores ded la tabla 
 //valor 0
@@ -82,7 +88,7 @@ valor[1].signo[4]=0b00001100;
 valor[1].signo[5]=0b00001100;
 valor[1].signo[6]=0b00001100;
 valor[1].signo[7]=0b00001100;
-//
+//val 2 
 
   const char tab[8]={0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08};
   for (j=0;j<8;j++){
